@@ -1,8 +1,33 @@
-<ion-header class="custom-header" [translucent]="true">
-  <ion-toolbar color="primary"> {{titleHeader}} </ion-toolbar>
+<ion-split-pane *ngIf="!isMobile" when="xs" contentId="main">
+  <ion-menu contentId="main">
+    <ion-header class="custom-header" [translucent]="true">
+      <ion-toolbar color="primary"> GPM - {{titleHeader}}</ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <ion-list>
+        <ion-item routerLink="/private/proyectos" routerDirection="root">
+          <ion-label>Proyectos musicales</ion-label>
+        </ion-item>
+        <ion-item routerLink="/private/contactos" routerDirection="root">
+          <ion-label>Colaboraciones y contactos</ion-label>
+        </ion-item>
+        <ion-item routerLink="/private/perfil" routerDirection="root">
+          <ion-label>Perfil</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <div class="ion-page" id="main">
+    <ion-router-outlet id="main"></ion-router-outlet>
+  </div>
+</ion-split-pane>
+
+<ion-header *ngIf="isMobile" class="custom-header" [translucent]="true">
+  <ion-toolbar color="primary"> GPM - {{titleHeader}} </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content *ngIf="isMobile" [fullscreen]="true">
   <ion-tabs>
     <ion-tab-bar class="custom-tabs">
       <ion-tab-button
