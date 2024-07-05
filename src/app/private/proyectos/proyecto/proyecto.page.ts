@@ -5,11 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './proyecto.page.html',
   styleUrls: ['./proyecto.page.scss'],
 })
-export class ProyectoPage implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class ProyectoPage {
+  selectedSegment = 'concepto';
+  constructor() {}
 }

@@ -10,11 +10,8 @@ import { filter } from 'rxjs';
 })
 export class PrivatePage {
   titleHeader = '';
-  isMobile = false;
 
   constructor(private router: Router, private platform: Platform) {
-    this.isMobile = this.platform.is('android') || this.platform.is('ios');
-    //this.isMobile = true;
     this.getRouterEvents();
   }
 

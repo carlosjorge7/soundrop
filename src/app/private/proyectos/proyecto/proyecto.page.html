@@ -1,10 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> Proyecto Musical </ion-title>
+  </ion-toolbar>
+</ion-header>
+
 <ion-content [fullscreen]="true">
   <br /><br /><br />
   <ion-button routerLink="/private/proyectos">
-    Volver a proyectos musicales</ion-button
-  >
+    Volver a proyectos musicales
+  </ion-button>
 
-  <ion-segment value="concepto">
+  <ion-segment [(ngModel)]="selectedSegment">
     <ion-segment-button value="concepto">
       <ion-label>Concepto</ion-label>
     </ion-segment-button>
@@ -21,4 +27,20 @@
       <ion-label>Imagen</ion-label>
     </ion-segment-button>
   </ion-segment>
+
+  <div *ngIf="selectedSegment === 'concepto'">
+    <app-concepto></app-concepto>
+  </div>
+  <div *ngIf="selectedSegment === 'letras'">
+    <app-letras></app-letras>
+  </div>
+  <div *ngIf="selectedSegment === 'pistas'">
+    <app-pistas></app-pistas>
+  </div>
+  <div *ngIf="selectedSegment === 'notas'">
+    <app-notas></app-notas>
+  </div>
+  <div *ngIf="selectedSegment === 'imagen'">
+    <app-imagen></app-imagen>
+  </div>
 </ion-content>
