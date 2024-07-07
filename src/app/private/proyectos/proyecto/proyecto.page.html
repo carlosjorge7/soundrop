@@ -1,9 +1,10 @@
 <ion-content [fullscreen]="true">
-  <br />
-  <br />
-  <br />
-  <ion-button routerLink="/private/proyectos"> Volver </ion-button>
-  <h3>{{nombreProyecto}}</h3>
+  <ion-button fill="clear" routerLink="/private/proyectos">
+    <ion-icon name="arrow-back-outline"></ion-icon> Volver
+  </ion-button>
+  <h3>
+    <ion-title> {{nombreProyecto}} </ion-title>
+  </h3>
 
   <ion-segment [scrollable]="true" [(ngModel)]="selectedSegment">
     <ion-segment-button value="concepto">

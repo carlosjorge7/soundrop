@@ -39,6 +39,13 @@ const routes: Routes = [
       },
     ],
   },
+  {
+    path: 'proyecto',
+    loadChildren: () =>
+      import('./proyectos/proyecto/proyecto.module').then(
+        (m) => m.ProyectoPageModule
+      ),
+  },
 ];
 
 @NgModule({

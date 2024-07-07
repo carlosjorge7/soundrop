@@ -29,7 +29,7 @@ export class ProyectosPage implements OnInit {
   }
 
   public goProyecto(proyecto: Proyecto): void {
-    this.router.navigate(['private/proyectos/proyecto'], {
+    this.router.navigate(['private/proyecto'], {
       queryParams: proyecto,
     });
   }

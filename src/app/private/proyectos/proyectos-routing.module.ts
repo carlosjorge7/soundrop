@@ -9,11 +9,6 @@ const routes: Routes = [
     component: ProyectosPage,
     data: { titleHeader: 'Proyectos musicales' },
   },
-  {
-    path: 'proyecto',
-    loadChildren: () =>
-      import('./proyecto/proyecto.module').then((m) => m.ProyectoPageModule),
-  },
 ];
 
 @NgModule({
