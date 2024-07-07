@@ -1,40 +1,19 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Proyectos musicales</ion-title>
-  </ion-toolbar>
-</ion-header>
-
+<br /><br />
+<br />
 <ion-content [fullscreen]="true">
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Proyecto</ion-card-title>
-      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-    </ion-card-header>
-
-    <ion-card-content>
-      <ion-button routerLink="proyecto/1"> Ir a proyecto </ion-button>
-    </ion-card-content>
-  </ion-card>
+  @for (proyecto of proyectos; track $index) {
 
   <ion-card>
     <ion-card-header>
-      <ion-card-title>Proyecto 2</ion-card-title>
-      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      <ion-card-title>{{proyecto.nombre}}</ion-card-title>
     </ion-card-header>
 
     <ion-card-content>
-      <ion-button routerLink="proyecto/2"> Ir a proyecto </ion-button>
+      <ion-button fill="outline" (click)="goProyecto(proyecto)">
+        <ion-icon name="log-out-outline"></ion-icon>
+        Ir a proyecto
+      </ion-button>
     </ion-card-content>
   </ion-card>
-
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Proyecto 3</ion-card-title>
-      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-    </ion-card-header>
-
-    <ion-card-content>
-      <ion-button routerLink="proyecto/3"> Ir a proyecto </ion-button>
-    </ion-card-content>
-  </ion-card>
+  }
 </ion-content>

@@ -12,6 +12,7 @@ const routes: Routes = [
   {
     path: '',
     component: ProyectoPage,
+    data: { titleHeader: 'Detalle proyecto' },
   },
 ];
 

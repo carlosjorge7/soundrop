@@ -1,5 +1,7 @@
 <ion-header class="custom-header" [translucent]="true">
-  <ion-toolbar color="primary"> GPM - {{titleHeader}} </ion-toolbar>
+  <ion-toolbar color="primary">
+    <ion-title> {{titleHeader}} </ion-title>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
@@ -28,7 +30,7 @@
         [routerLink]="['/private/eventos']"
         [routerLinkActive]="'ion-tab-button-active'"
       >
-        <ion-icon name="musical-notes-outline"></ion-icon>
+        <ion-icon name="time-outline"></ion-icon>
         <ion-label>Eventos</ion-label>
       </ion-tab-button>
 

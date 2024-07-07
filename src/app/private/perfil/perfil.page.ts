@@ -5,11 +5,14 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './perfil.page.html',
   styleUrls: ['./perfil.page.scss'],
 })
-export class PerfilPage implements OnInit {
+export class PerfilPage {
+  nombre: string = 'C3JOTA';
+  email: string = 'carlosjorgech7@gmail.com';
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
+  editProfile() {
+    // Lógica para editar el perfil
+    console.log('Edit Profile Clicked');
   }
-
 }

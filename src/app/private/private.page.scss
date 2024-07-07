@@ -2,3 +2,19 @@ ion-split-pane {
   --side-width: 150px;
   --side-max-width: 150px;
 }
+ion-title {
+  text-align: center;
+  margin-bottom: 8px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+}
+
+.custom-header ion-toolbar {
+  --height: 44px; /* Ajusta la altura del ion-toolbar */
+  --padding-top: 0; /* Elimina el padding superior */
+  --padding-bottom: 0; /* Elimina el padding inferior */
+  --padding-start: 8px; /* Ajusta el padding izquierdo */
+  --padding-end: 8px; /* Ajusta el padding derecho */
+  --border-width: 0; /* Elimina cualquier borde */
+  height: 44px; /* Ajusta la altura del ion-toolbar */
+}

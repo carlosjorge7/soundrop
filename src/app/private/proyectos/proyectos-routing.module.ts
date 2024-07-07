@@ -10,7 +10,7 @@ const routes: Routes = [
     data: { titleHeader: 'Proyectos musicales' },
   },
   {
-    path: 'proyecto/:id',
+    path: 'proyecto',
     loadChildren: () =>
       import('./proyecto/proyecto.module').then((m) => m.ProyectoPageModule),
   },

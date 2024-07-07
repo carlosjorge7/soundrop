@@ -1,16 +1,11 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title> Proyecto Musical </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <br /><br /><br />
-  <ion-button routerLink="/private/proyectos">
-    Volver a proyectos musicales
-  </ion-button>
+  <br />
+  <br />
+  <br />
+  <ion-button routerLink="/private/proyectos"> Volver </ion-button>
+  <h3>{{nombreProyecto}}</h3>
 
-  <ion-segment [(ngModel)]="selectedSegment">
+  <ion-segment [scrollable]="true" [(ngModel)]="selectedSegment">
     <ion-segment-button value="concepto">
       <ion-label>Concepto</ion-label>
     </ion-segment-button>
