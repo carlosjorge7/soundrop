@@ -4,11 +4,8 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-letras',
   templateUrl: './letras.component.html',
   styleUrls: ['./letras.component.scss'],
+  standalone: true,
 })
-export class LetrasComponent  implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {}
-
+export class LetrasComponent {
+  constructor() {}
 }

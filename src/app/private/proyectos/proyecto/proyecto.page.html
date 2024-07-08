@@ -6,7 +6,11 @@
     <ion-title> {{nombreProyecto}} </ion-title>
   </h3>
 
-  <ion-segment [scrollable]="true" [(ngModel)]="selectedSegment">
+  <ion-segment
+    [scrollable]="true"
+    (ionChange)="change($any($event))"
+    value="concepto"
+  >
     <ion-segment-button value="concepto">
       <ion-label>Concepto</ion-label>
     </ion-segment-button>
@@ -24,19 +28,15 @@
     </ion-segment-button>
   </ion-segment>
 
-  <div *ngIf="selectedSegment === 'concepto'">
-    <app-concepto></app-concepto>
-  </div>
-  <div *ngIf="selectedSegment === 'letras'">
-    <app-letras></app-letras>
-  </div>
-  <div *ngIf="selectedSegment === 'pistas'">
-    <app-pistas></app-pistas>
-  </div>
-  <div *ngIf="selectedSegment === 'notas'">
-    <app-notas></app-notas>
-  </div>
-  <div *ngIf="selectedSegment === 'imagen'">
-    <app-imagen></app-imagen>
-  </div>
+  @if (selectedSegment === 'concepto') {
+  <app-concepto></app-concepto>
+  } @if (selectedSegment === 'letras') {
+  <app-letras></app-letras>
+  } @if (selectedSegment === 'pistas') {
+  <app-pistas></app-pistas>
+  } @if (selectedSegment === 'notas') {
+  <app-notas></app-notas>
+  } @if (selectedSegment === 'imagen') {
+  <app-imagen></app-imagen>
+  }
 </ion-content>

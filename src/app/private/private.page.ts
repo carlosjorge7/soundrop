@@ -1,17 +1,61 @@
 import { Component } from '@angular/core';
-import { ActivationEnd, Router } from '@angular/router';
-import { Platform } from '@ionic/angular';
+import {
+  ActivationEnd,
+  Router,
+  RouterLink,
+  RouterLinkActive,
+} from '@angular/router';
 import { filter } from 'rxjs';
+import {
+  IonHeader,
+  IonLabel,
+  IonToolbar,
+  IonTitle,
+  IonContent,
+  IonTabBar,
+  IonTabs,
+  IonTabButton,
+  IonIcon,
+  IonRouterLink,
+} from '@ionic/angular/standalone';
+import { addIcons } from 'ionicons';
+import {
+  earthOutline,
+  timeOutline,
+  personOutline,
+  musicalNotesOutline,
+} from 'ionicons/icons';
 
 @Component({
   selector: 'app-private',
   templateUrl: './private.page.html',
   styleUrls: ['./private.page.scss'],
+  standalone: true,
+  imports: [
+    IonHeader,
+    IonLabel,
+    IonToolbar,
+    IonTitle,
+    IonContent,
+    IonTabBar,
+    IonTabs,
+    IonTabButton,
+    IonIcon,
+    IonRouterLink,
+    RouterLink,
+    RouterLinkActive,
+  ],
 })
 export class PrivatePage {
   titleHeader = '';
 
-  constructor(private router: Router, private platform: Platform) {
+  constructor(private router: Router) {
+    addIcons({
+      earthOutline,
+      musicalNotesOutline,
+      timeOutline,
+      personOutline,
+    });
     this.getRouterEvents();
   }
 

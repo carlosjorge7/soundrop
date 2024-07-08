@@ -4,11 +4,8 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-pistas',
   templateUrl: './pistas.component.html',
   styleUrls: ['./pistas.component.scss'],
+  standalone: true,
 })
-export class PistasComponent  implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {}
-
+export class PistasComponent {
+  constructor() {}
 }

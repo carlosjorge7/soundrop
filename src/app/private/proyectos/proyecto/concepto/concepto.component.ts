@@ -4,11 +4,8 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-concepto',
   templateUrl: './concepto.component.html',
   styleUrls: ['./concepto.component.scss'],
+  standalone: true,
 })
-export class ConceptoComponent  implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {}
-
+export class ConceptoComponent {
+  constructor() {}
 }
