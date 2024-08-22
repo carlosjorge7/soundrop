@@ -24,6 +24,7 @@ import {
   timeOutline,
   personOutline,
   musicalNotesOutline,
+  cloudDownloadOutline,
 } from 'ionicons/icons';
 
 @Component({
@@ -55,6 +56,7 @@ export class PrivatePage {
       musicalNotesOutline,
       timeOutline,
       personOutline,
+      cloudDownloadOutline,
     });
     this.getRouterEvents();
   }

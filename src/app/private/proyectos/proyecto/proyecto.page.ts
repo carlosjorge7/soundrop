@@ -15,7 +15,6 @@ import { ConceptoComponent } from './concepto/concepto.component';
 import { ImagenComponent } from './imagen/imagen.component';
 import { LetrasComponent } from './letras/letras.component';
 import { NotasComponent } from './notas/notas.component';
-import { PistasComponent } from './pistas/pistas.component';
 import { addIcons } from 'ionicons';
 import { arrowBackOutline } from 'ionicons/icons';
 
@@ -36,7 +35,6 @@ import { arrowBackOutline } from 'ionicons/icons';
     ImagenComponent,
     LetrasComponent,
     NotasComponent,
-    PistasComponent,
     RouterLink,
   ],
 })

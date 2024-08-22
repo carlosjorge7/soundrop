@@ -1,0 +1,57 @@
+<hr />
+<hr />
+<ion-content class="ion-padding" [fullscreen]="true">
+  <ion-note color="secondary"
+    >Recuerda tener desbloqueado la apertura de ventanas emergentes de tu
+    navegador predeterminado</ion-note
+  >
+  <hr />
+
+  <ion-title>Descargar canciones de Youtube</ion-title>
+
+  <form [formGroup]="form" (ngSubmit)="download()">
+    <ion-input
+      [clearInput]="true"
+      label="Ingrese la URL"
+      label-placement="floating"
+      fill="outline"
+      placeholder="Intro la url de youtube para descargar a MP3·"
+      formControlName="url"
+    ></ion-input>
+
+    <ion-button
+      [disabled]="form.invalid"
+      id="open-loading"
+      type="submit"
+      fill="outline"
+    >
+      Descargar de Youtube</ion-button
+    >
+  </form>
+
+  <ion-title>Descargar canciones de Spotify</ion-title>
+
+  <form [formGroup]="formSpty" (ngSubmit)="downloadSpoty()">
+    <ion-input
+      [clearInput]="true"
+      label="Ingrese la URL de Spoty"
+      label-placement="floating"
+      fill="outline"
+      placeholder="Intro la url de spoty"
+      formControlName="urlSpoty"
+    ></ion-input>
+
+    <ion-button
+      [disabled]="formSpty.invalid"
+      id="open-loading"
+      type="submit"
+      fill="outline"
+    >
+      Descargar de Spotify</ion-button
+    >
+  </form>
+
+  @if (showSpinner()) {
+  <ion-spinner name="lines"></ion-spinner>
+  }
+</ion-content>

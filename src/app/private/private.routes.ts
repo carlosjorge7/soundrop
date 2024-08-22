@@ -17,9 +17,9 @@ export const routes: Routes = [
           import('./contactos/contactos.routes').then((m) => m.routes),
       },
       {
-        path: 'eventos',
+        path: 'descargar',
         loadChildren: () =>
-          import('./eventos/eventos.routes').then((m) => m.routes),
+          import('./descargar/descargas.routes').then((m) => m.routes),
       },
       {
         path: 'perfil',
