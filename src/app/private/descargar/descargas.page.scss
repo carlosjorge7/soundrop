@@ -1,0 +1,48 @@
+:host {
+  padding-top: 56px;
+}
+.ios :host {
+  padding-top: 100px;
+}
+
+.info-note {
+  text-align: center;
+  font-size: 14px;
+}
+
+.download-section {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px 0 10px 0;
+}
+
+.download-form {
+  margin: 0 auto;
+  max-width: 500px;
+  margin-top: 20px;
+}
+
+.input-field {
+  margin-bottom: 20px;
+}
+
+.submit-button {
+  --background: #3880ff;
+  --color: #fff;
+  --border-radius: 8px;
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+ion-button {
+  text-transform: initial;
+}

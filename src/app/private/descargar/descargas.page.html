@@ -1,57 +1,74 @@
-<hr />
-<hr />
 <ion-content class="ion-padding" [fullscreen]="true">
-  <ion-note color="secondary"
-    >Recuerda tener desbloqueado la apertura de ventanas emergentes de tu
-    navegador predeterminado</ion-note
-  >
-  <hr />
+  <ion-note color="secondary" class="info-note">
+    Recuerda tener desbloqueado la apertura de ventanas emergentes de tu
+    navegador predeterminado
+  </ion-note>
 
-  <ion-title>Descargar canciones de Youtube</ion-title>
+  <section class="download-section">
+    <ion-title class="section-title">Descargar canciones de YouTube</ion-title>
 
-  <form [formGroup]="form" (ngSubmit)="download()">
-    <ion-input
-      [clearInput]="true"
-      label="Ingrese la URL"
-      label-placement="floating"
-      fill="outline"
-      placeholder="Intro la url de youtube para descargar a MP3·"
-      formControlName="url"
-    ></ion-input>
+    <form [formGroup]="form" (ngSubmit)="download()" class="download-form">
+      <ion-input
+        [clearInput]="true"
+        label="Ingrese la URL"
+        label-placement="floating"
+        fill="outline"
+        placeholder="Introduce la URL de YouTube para descargar a MP3"
+        formControlName="url"
+        class="input-field"
+      ></ion-input>
 
-    <ion-button
-      [disabled]="form.invalid"
-      id="open-loading"
-      type="submit"
-      fill="outline"
+      <ion-button
+        shape="round"
+        [disabled]="form.invalid"
+        id="open-loading"
+        type="submit"
+        fill="solid"
+        expand="full"
+        class="submit-button"
+      >
+        Descargar de YouTube
+      </ion-button>
+    </form>
+  </section>
+
+  <!-- Sección de descarga de Spotify -->
+  <section class="download-section">
+    <ion-title class="section-title">Descargar canciones de Spotify</ion-title>
+
+    <form
+      [formGroup]="formSpty"
+      (ngSubmit)="downloadSpoty()"
+      class="download-form"
     >
-      Descargar de Youtube</ion-button
-    >
-  </form>
+      <ion-input
+        [clearInput]="true"
+        label="Ingrese la URL de Spotify"
+        label-placement="floating"
+        fill="outline"
+        placeholder="Introduce la URL de Spotify"
+        formControlName="urlSpoty"
+        class="input-field"
+      ></ion-input>
 
-  <ion-title>Descargar canciones de Spotify</ion-title>
+      <ion-button
+        shape="round"
+        [disabled]="formSpty.invalid"
+        id="open-loading"
+        type="submit"
+        fill="solid"
+        expand="full"
+        class="submit-button"
+      >
+        Descargar de Spotify
+      </ion-button>
+    </form>
+  </section>
 
-  <form [formGroup]="formSpty" (ngSubmit)="downloadSpoty()">
-    <ion-input
-      [clearInput]="true"
-      label="Ingrese la URL de Spoty"
-      label-placement="floating"
-      fill="outline"
-      placeholder="Intro la url de spoty"
-      formControlName="urlSpoty"
-    ></ion-input>
-
-    <ion-button
-      [disabled]="formSpty.invalid"
-      id="open-loading"
-      type="submit"
-      fill="outline"
-    >
-      Descargar de Spotify</ion-button
-    >
-  </form>
-
-  @if (showSpinner()) {
-  <ion-spinner name="lines"></ion-spinner>
+  <!-- Spinner de carga -->
+  @if(showSpinner()){
+  <div class="spinner-container">
+    <ion-spinner name="lines"></ion-spinner>
+  </div>
   }
 </ion-content>
