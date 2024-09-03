@@ -7,35 +7,25 @@ export const routes: Routes = [
     component: PrivatePage,
     children: [
       {
-        path: 'proyectos',
+        path: 'my-library',
         loadChildren: () =>
-          import('./proyectos/proyectos.routes').then((m) => m.routes),
+          import('./library/library.routes').then((m) => m.routes),
       },
       {
-        path: 'contactos',
+        path: 'download-spoti',
         loadChildren: () =>
-          import('./contactos/contactos.routes').then((m) => m.routes),
+          import('./spotify/spotify.routes').then((m) => m.routes),
       },
       {
-        path: 'descargar',
+        path: 'dowload-yt',
         loadChildren: () =>
-          import('./descargar/descargas.routes').then((m) => m.routes),
-      },
-      {
-        path: 'perfil',
-        loadChildren: () =>
-          import('./perfil/perfil.routes').then((m) => m.routes),
+          import('./youtube/youtube.routes').then((m) => m.routes),
       },
       {
         path: '',
-        redirectTo: 'proyectos',
+        redirectTo: 'my-library',
         pathMatch: 'full',
       },
     ],
-  },
-  {
-    path: 'proyecto',
-    loadChildren: () =>
-      import('./proyectos/proyecto/proyecto.routes').then((m) => m.routes),
   },
 ];
