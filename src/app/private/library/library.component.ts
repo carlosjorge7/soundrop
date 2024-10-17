@@ -10,6 +10,7 @@ import {
   IonCardTitle,
   IonCardSubtitle,
   IonCardContent,
+  IonNote,
 } from '@ionic/angular/standalone';
 
 @Component({
@@ -18,6 +19,7 @@ import {
   styleUrls: ['./library.component.scss'],
   standalone: true,
   imports: [
+    IonNote,
     IonCardContent,
     IonCardSubtitle,
     IonCardTitle,
