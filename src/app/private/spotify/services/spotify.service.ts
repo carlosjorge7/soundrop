@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ResponseSpoty } from '../models/spotify';
+import { ResponsePlaylistSpoty, ResponseSongSpoty } from '../models/spotify';
 
 @Injectable({
   providedIn: 'root',
@@ -19,13 +19,15 @@ export class SpotifyService {
 
   constructor(private http: HttpClient) {}
 
-  public downloadSpoty(songId: string): Observable<ResponseSpoty> {
+  public downloadSpoty(songId: string): Observable<ResponseSongSpoty> {
     const url = `${this.apiUrlSpoty}/downloadSong?songId=${songId}`;
-    return this.http.get<ResponseSpoty>(url, { headers: this.headers });
+    return this.http.get<ResponseSongSpoty>(url, { headers: this.headers });
   }
 
-  public downloadPlaylist(playlistId: string): Observable<any> {
+  public downloadPlaylist(
+    playlistId: string
+  ): Observable<ResponsePlaylistSpoty> {
     const url = `${this.apiUrlSpoty}/downloadPlaylist?playlistId=${playlistId}`;
-    return this.http.get(url, { headers: this.headers });
+    return this.http.get<ResponsePlaylistSpoty>(url, { headers: this.headers });
   }
 }

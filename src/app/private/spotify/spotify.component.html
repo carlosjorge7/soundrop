@@ -1,15 +1,15 @@
 <ion-content class="ion-padding" [fullscreen]="true">
-  <ion-note color="dark" class="info-note">
-    Recuerda tener desbloqueado la apertura de ventanas emergentes de tu
-    navegador predeterminado
+  <ion-note color="primary" class="info-note">
+    Ve a Spotify, la cancion o la playlist que quieras y le das al icono
+    <ion-icon name="ellipsis-vertical"></ion-icon> Recuerda tener desbloqueado
+    la apertura de ventanas emergentes de tu navegador predeterminado
   </ion-note>
 
   <section class="download-section">
-    <ion-title class="section-title">Descargar canciones de Spotify</ion-title>
-
+    <ion-title class="section-title">Descargar canción</ion-title>
     <form
       [formGroup]="formSpty"
-      (ngSubmit)="downloadSpoty()"
+      (ngSubmit)="downloadSong()"
       class="download-form"
     >
       <ion-input
@@ -29,7 +29,34 @@
         fill="solid"
         expand="full"
       >
-        Descargar de Spotify
+        Descargar canción
+      </ion-button>
+    </form>
+
+    <ion-title class="section-title">Descargar playlist</ion-title>
+    <form
+      [formGroup]="formPlaylist"
+      (ngSubmit)="downloadPlaylist()"
+      class="download-form"
+    >
+      <ion-input
+        [clearInput]="true"
+        label="Ingrese la URL de Spotify"
+        label-placement="floating"
+        fill="outline"
+        placeholder="Introduce la URL de Spotify"
+        formControlName="urlPlaylistSpoty"
+        class="input-field"
+      ></ion-input>
+
+      <ion-button
+        shape="round"
+        [disabled]="formPlaylist.invalid"
+        type="submit"
+        fill="solid"
+        expand="full"
+      >
+        Descargar playlist
       </ion-button>
     </form>
   </section>
