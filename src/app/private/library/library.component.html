@@ -1,3 +1,37 @@
-<p>
-  library works!
-</p>
+<ion-content class="ion-padding" [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="4"
+        ><ion-card [routerLink]="['/private/download-spoti']">
+          <img
+            alt="Spotify"
+            src="https://m.media-amazon.com/images/I/31B2Nyzd8XL.png"
+          />
+          <ion-card-header>
+            <ion-card-title>Descargar ahora</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+            Introduciendo el link de spotify
+          </ion-card-content>
+        </ion-card></ion-col
+      >
+      <ion-col size="4">
+        <ion-card [routerLink]="['/private/dowload-yt']">
+          <img
+            alt="Youtube"
+            src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg"
+          />
+          <ion-card-header>
+            <ion-card-title>Descargar ahora</ion-card-title>
+            <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+          </ion-card-header>
+
+          <ion-card-content>
+            Introduciendo el link de youtube
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
